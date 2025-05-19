@@ -60,24 +60,24 @@ src/
 ├── application
 │   ├── usecases
 │   │   └── UserCreator
-│   │       └── index.ts    # Caso de uso para crear un usuario, maneja la lógica de negocio específica.
+│   │       └── index.ts              # Caso de uso para crear un usuario, maneja la lógica de negocio específica.
 ├── domain
 │   ├── entities
-│   │   └── User.ts         # Entidad que representa a un usuario con sus propiedades y métodos.
+│   │   └── User.ts                   # Entidad que representa a un usuario con sus propiedades y métodos.
 │   ├── exceptions
-│   │   └── UserNotFoundError.ts  # Excepción personalizada lanzada cuando no se encuentra un usuario.
+│   │   └── UserNotFoundError.ts      # Excepción personalizada lanzada cuando no se encuentra un usuario.
 │   ├── repositories
-│   │   └── UserRepository.ts  # Interfaz que define las operaciones necesarias para interactuar con los usuarios.
+│   │   └── UserRepository.ts         # Interfaz que define las operaciones necesarias para interactuar con los usuarios.
 │   └── services
-│       └── UserService.ts  # Servicio que gestiona la lógica relacionada con los usuarios (ej. validaciones).
+│       └── UserService.ts            # Servicio que gestiona la lógica relacionada con los usuarios (ej. validaciones).
 ├── infrastructure
 │   ├── driven-adapters
 │   │   └── UserRepositoryAdapter.ts  # Adaptador para interactuar con la base de datos o almacenamiento de usuarios.
 │   ├── driving-adapters
 │   │   └── api-rest
-│   │       └── UserController.ts  # Controlador que maneja las solicitudes HTTP de la API para gestionar usuarios.
+│   │       └── UserController.ts     # Controlador que maneja las solicitudes HTTP de la API para gestionar usuarios.
 │   └── implementations
-│       └── userRepository.ts  # Implementación concreta del repositorio de usuarios (por ejemplo, acceso a base de datos).
+│       └── userRepository.ts         # Implementación concreta del repositorio de usuarios (por ejemplo, acceso a base de datos).
 ```
 
 ## Equipo
