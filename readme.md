@@ -84,8 +84,8 @@ src/
 
 - [Juan Revinski](https://github.com/RevJuanma) - Profesor a cargo
 ---
-- [Mereles Lautaro](https://github.com/MerelesLautaro)
-- [Ezequiel Beuter](https://github.com/EzequeielB)
+- [Mereles Lautaro](https://github.com/MerelesLautaro) - Desarrollador
+- [Ezequiel Beuter](https://github.com/EzequeielB) - Desarrollador
 
 ## Enlaces
 
