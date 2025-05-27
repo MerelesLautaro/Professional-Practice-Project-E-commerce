@@ -2,6 +2,7 @@ import Navbar from "../shared/components/Navbar";
 import FormsContainer from "../shared/components/FormsContainer";
 import Form from "../shared/components/Form";
 import InputField from "../shared/components/InputField";
+import "@fontsource/iceberg"; 
 
 const Login =()=>{
     return(
@@ -16,11 +17,11 @@ const Login =()=>{
                     <a href="#">Ingresá aquí</a>
                 </div>
 
-                <TextField label="Usuario" />
-                <TextField label="Apellido" />
-                <TextField label="Telefono" />
-                <TextField label="E-Mail" type="email" />
-                <TextField label="Password" type="password" />
+                <InputField label="Usuario" />
+                <InputField label="Apellido" />
+                <InputField label="Telefono" />
+                <InputField label="E-Mail" type="email" />
+                <InputField label="Password" type="password" />
             </Form>
         </FormsContainer>
         </>
