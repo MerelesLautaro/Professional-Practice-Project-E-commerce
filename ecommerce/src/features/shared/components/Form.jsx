@@ -1,5 +1,5 @@
 import PrimarylButton from "./PrimaryButton";
-const FormCard=({buttonText="default",children})=>{
+const Form=({buttonText="default",children})=>{
     return(
         <form method="post">
             {children}
@@ -8,4 +8,4 @@ const FormCard=({buttonText="default",children})=>{
     )
 }
 
-export default FormCard;
+export default Form;

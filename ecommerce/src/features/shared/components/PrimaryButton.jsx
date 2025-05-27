@@ -1,6 +1,6 @@
 const PrimarylButton=({type="submit" ,children})=>{
     return(
-        <div className="form-button">
+        <div className="primary-button">
             <button type={type}>{children}</button>
         </div>
     )
