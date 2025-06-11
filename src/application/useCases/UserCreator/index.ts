@@ -6,7 +6,6 @@ import { ExistUserByEmail } from "application/services/ExistsUserByEmail/ExistUs
 import { EmailAlreadyExistEception } from "domain/exceptions/EmailAlreadyExistException";
 import { UserIdNotGeneratedException } from "domain/exceptions/UserIdNotGeneratedException";
 import { TokenService } from "application/services/TokenService/TokenService";
-import { UserValidator } from "application/validators/UserValidator";
 import bcrypt from "bcrypt";
 import { Role } from "domain/entities/enum/Role";
 
@@ -21,9 +20,7 @@ export class UserCreatorUseCase {
     this._tokenService = new TokenService();
   }
 
-  async run (body: UserRegisterRequest): Promise<Token> {
-    UserValidator.validate(body); // validations with JOI
-    
+  async run (body: UserRegisterRequest): Promise<Token> {    
     const existsUser: boolean = await this._existUserByEmail.run(body.email);
     if (existsUser) throw new EmailAlreadyExistEception();
 
