@@ -1,4 +1,4 @@
-const FormsContainer = ({ children }) => {
+const Container = ({ children }) => {
   return (
     <div className="card-container">
       <div className="card">
@@ -8,4 +8,4 @@ const FormsContainer = ({ children }) => {
   );
 };
 
-export default FormsContainer;
+export default Container;
