@@ -19,7 +19,7 @@ export class Server  {
   }
 
   private configureRoutes (): void {
-    this.app.use('/api/v1/users', userRouter)
+    this.app.use('/api/v1/auth', userRouter)
   }
 
   private configureErrorHandling (): void {

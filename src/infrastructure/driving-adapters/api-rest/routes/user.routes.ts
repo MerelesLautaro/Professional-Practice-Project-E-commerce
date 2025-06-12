@@ -1,9 +1,11 @@
-import { Router } from 'express'
-import { buildUserController } from '../../../config/dependencyInjection'
+import { Router } from 'express';
+import { buildAuthControllers } from '../../../config/authControllerFactory';
 
-const userRouter = Router()
-const userController = buildUserController()
+const { registerController, logoutController } = buildAuthControllers();
 
-userRouter.use('/', userController.router)
+const authRouter = Router();
 
-export default userRouter
+authRouter.post('/register', registerController.handle.bind(registerController));
+authRouter.post('/logout', logoutController.handle.bind(logoutController));
+
+export default authRouter;
