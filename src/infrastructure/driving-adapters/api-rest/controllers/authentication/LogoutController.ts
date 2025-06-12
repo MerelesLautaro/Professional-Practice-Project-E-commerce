@@ -1,10 +1,11 @@
 import type { Request, Response, NextFunction } from 'express';
 import type { TokenBlacklistRepository } from 'domain/repositories/TokenBlacklistRepository';
 import { BadRequestException } from 'domain/exceptions/BadRequestException';
+import { UserLogoutUseCase } from 'application/useCases/UserLogout';
 
 export class LogoutController {
   
-  constructor(private readonly tokenBlacklistRepo: TokenBlacklistRepository) {}
+  constructor(private readonly logoutUseCase: UserLogoutUseCase) {}
 
   async handle(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
@@ -16,7 +17,7 @@ export class LogoutController {
 
       const token = authHeader.split(' ')[1];
 
-      await this.tokenBlacklistRepo.addTokenToBlacklist(token);
+      await this.logoutUseCase.run(token);
 
       res.status(204).send(); // No Content
     } catch (err) {
