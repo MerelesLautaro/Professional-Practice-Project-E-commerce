@@ -1,5 +1,5 @@
 import type { Request, Response, NextFunction } from 'express';
-import type { TokenBlacklistRepository } from 'domain/repositories/AuthenticationRepository';
+import type { TokenBlacklistRepository } from 'domain/repositories/TokenBlacklistRepository';
 import { BadRequestException } from 'domain/exceptions/BadRequestException';
 
 export class LogoutController {

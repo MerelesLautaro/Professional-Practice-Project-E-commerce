@@ -1,4 +1,4 @@
-import { TokenBlacklistRepository } from 'domain/repositories/AuthenticationRepository';
+import { TokenBlacklistRepository } from 'domain/repositories/TokenBlacklistRepository';
 import jwt from 'jsonwebtoken';
 
 export class InMemoryTokenBlacklistRepository implements TokenBlacklistRepository {

@@ -1,4 +1,4 @@
-import { TokenBlacklistRepository } from 'domain/repositories/AuthenticationRepository';
+import { TokenBlacklistRepository } from 'domain/repositories/TokenBlacklistRepository';
 
 export class UserLogoutUseCase {
   constructor(private readonly blacklistRepo: TokenBlacklistRepository) {}

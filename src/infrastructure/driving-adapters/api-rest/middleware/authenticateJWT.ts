@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import { UnauthorizedAccess } from 'domain/exceptions/UnauthorizedAccessException';
 import { AccessDeniedException } from 'domain/exceptions/AccessDeniedException';
 import { TokenExpiredException } from 'domain/exceptions/TokenExpiredException';
-import { TokenBlacklistRepository } from 'domain/repositories/AuthenticationRepository';
+import { TokenBlacklistRepository } from 'domain/repositories/TokenBlacklistRepository';
 
 dotenv.config();
 
