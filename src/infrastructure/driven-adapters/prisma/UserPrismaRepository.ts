@@ -53,4 +53,18 @@ export class UserPrismaRepository implements UserRepository {
 
     return UserMapper.toDomain(user, roles)
   }
+
+  async getUserByPhone(phone: string): Promise<User | null> {
+    const user = await this.prisma.user.findUnique({
+      where: { phone }
+    })
+
+    if (!user) return null
+
+    const roles = await this.prisma.userRole.findMany({
+      where: { userId: user.id }
+    })
+
+    return UserMapper.toDomain(user, roles)
+  }
 }
