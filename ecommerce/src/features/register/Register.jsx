@@ -2,7 +2,7 @@ import * as Yup from 'yup';
 import {Navbar,Container,DynamicForm} from '../shared/components'
 import "@fontsource/iceberg"; 
 
-function Login() {
+function Register() {
 const formElements = [
   { type: 'email', name: 'Email', label: 'E-Mail', placeholder: 'Ingresa tu email' },
   { type: 'tel', name: 'Telefono', label: 'Telefono', placeholder: 'Ingresa tu número de teléfono' },
@@ -35,7 +35,7 @@ confirmPassword: Yup.string()
   .min(8, 'La contraseña debe tener al menos 8 caracteres')
   .matches(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]+$/, 'La contraseña debe contener letras y números')
   .oneOf([Yup.ref('password'), null], 'Las contraseñas no coinciden')
-  .required('Debes repetir la contraseña'),
+  .required('La contraseña es obligatoria'),
 });
 
 
@@ -63,4 +63,4 @@ confirmPassword: Yup.string()
   );
 }
 
-export default Login;
+export default Register;

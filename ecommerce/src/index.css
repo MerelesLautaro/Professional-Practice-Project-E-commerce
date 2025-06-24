@@ -1,28 +1,28 @@
 * {
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     font-family: "Iceberg";
 }
 
-.card-container{
+.card-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 1.25rem; 
 }
 
-label{
-    font-size: 24px;
+label {
+    font-size: 1.5rem; 
 }
 
-button{
-    background-color:#000000;
-    color:#FFFFFF;
-    border:none;
-    width:200px;
-    height:45px;
-    font-size: 24px;
+button {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: none;
+    width: 12.5rem;   
+    height: 2.8125rem; 
+    font-size: 1.5rem; 
 }
 
 button:hover {
@@ -30,121 +30,117 @@ button:hover {
     cursor: pointer;
 }
 
-.card{
+.card {
     display: flex;
     flex-direction: column;
     border: solid black;
-    display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 600px;
-    height: auto; 
-    padding: 1rem;        
-    box-sizing: border-box; 
+    max-width: 37.5rem; 
+    height: auto;
+    padding: 1rem;      
+    box-sizing: border-box;
 }
 
 .forms-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;            
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3125rem; 
 }
 
-.forms-title h2{
-    color: #616161
+.forms-title h2 {
+    color: #616161;
 }
 
-.forms-title a{
+.forms-title a {
     color: #616161;
     text-decoration: none;
-
 }
 
-.forms-title a:hover{
-    color : #000000;
-    cursor: pointer;    
+.forms-title a:hover {
+    color: #000000;
+    cursor: pointer;
 }
 
-form{
+form {
     width: 100%;
-    max-width: 562px; 
+    max-width: 35.125rem; 
     display: flex;
-    align-items:center;
+    align-items: center;
     flex-direction: column;
-    margin-top:30px;
-    gap:20px;
+    margin-top: 1.875rem; 
+    gap: 1.25rem;      
 }
 
-
-.input-field{
+.input-field {
     width: 100%;
-    max-width: 562px; 
+    max-width: 35.125rem; 
     display: flex;
-    align-items:center;
+    align-items: center;
     flex-direction: column;
 }
 
-.input-field label{
+.input-field label {
     width: 100%;
 }
 
-input{
-    height: 32px;
+input {
+    height: 2rem;
     width: 100%;
-    max-width: 562px;
-    font-size: 20px;
-    padding: 8px;
+    max-width: 35.125rem; 
+    font-size: 1.25rem;  
+    padding: 0.5rem;      
 }
 
 .error {
-  color: #ff0000;
-  margin-top: 4px;
-  font-size: 0.9em;
-  width: 100%;
-  text-align: left;
+    color: #ff0000;
+    margin-top: 0.25rem;  
+    font-size: 0.9em;
+    width: 100%;
+    text-align: left;
+    padding-left: 0.75rem; 
 }
 
-
-.navbar{
+.navbar {
     background-color: #616161;
-    color:#ffffff;
+    color: #ffffff;
     display: flex;
     justify-content: space-between;
-    align-items:center;
-    height: 64px;
+    align-items: center;
+    height: 4rem;         
 }
 
-.navbar-list ul{
-    padding:0px;
-    margin:0px;
+.navbar-list ul {
+    padding: 0;
+    margin: 0;
     list-style: none;
     display: flex;
-    gap: 64px;
+    gap: 4rem;            
 }
 
-.site-title{
-    font-size: 48px;
+.site-title {
+    font-size: 3rem;    
     color: inherit;
     text-decoration: none;
 }
 
-.navbar-list a{
+.navbar-list a {
     color: inherit;
     text-decoration: none;
 }
-
 
 .password-toggle {
-  position: absolute;
-  right: 12px;
-  top: 55%;
-  transform: translateY(-50%);
-  cursor: pointer;
-  color: #555;
+    position: absolute;
+    right: 0.75rem;
+    top: 55%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #555;
 }
 
 .input-wrapper {
-  position: relative;
-  width: 100%;
+    position: relative;
+    width: 100%;
 }
