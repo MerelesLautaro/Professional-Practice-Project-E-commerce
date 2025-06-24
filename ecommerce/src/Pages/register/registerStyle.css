@@ -1,0 +1,139 @@
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem; 
+}
+
+label {
+    font-size: 1.5rem; 
+}
+
+button {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: none;
+    width: 12.5rem;   
+    height: 2.8125rem; 
+    font-size: 1.5rem; 
+}
+
+button:hover {
+    background-color: #333333;
+    cursor: pointer;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border: solid black;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 37.5rem; 
+    height: auto;
+    padding: 1rem;      
+    box-sizing: border-box;
+}
+
+.forms-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3125rem; 
+}
+
+.forms-title h2 {
+    color: #616161;
+}
+
+.forms-title a {
+    color: #616161;
+    text-decoration: none;
+}
+
+.forms-title a:hover {
+    color: #000000;
+    cursor: pointer;
+}
+
+form {
+    width: 100%;
+    max-width: 35.125rem; 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1.875rem; 
+    gap: 1.25rem;      
+}
+
+.input-field {
+    width: 100%;
+    max-width: 35.125rem; 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-field label {
+    width: 100%;
+}
+
+input {
+    height: 2rem;
+    width: 100%;
+    max-width: 35.125rem; 
+    font-size: 1.25rem;  
+    padding: 0.5rem;      
+}
+
+.error {
+    color: #ff0000;
+    margin-top: 0.25rem;  
+    font-size: 0.9em;
+    width: 100%;
+    text-align: left;
+    padding-left: 0.75rem; 
+}
+
+.navbar {
+    background-color: #616161;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;         
+}
+
+.navbar-list ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 4rem;            
+}
+
+.site-title {
+    font-size: 3rem;    
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbar-list a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 0.75rem;
+    top: 55%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #555;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
