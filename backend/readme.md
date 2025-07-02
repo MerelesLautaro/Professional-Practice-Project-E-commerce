@@ -55,12 +55,31 @@ src/
 ## Estructura del Proyecto (Backend)
 ### Clean Architecture
 
+#### Pasos para ejecutar el backend
+1 - Instalar las dependencias
+```
+npm install
+```
+2 - Crear las migraciones
+```
+npx prisma generate
+```
+3 - Compilar el código
+```
+npm run build
+```
+4 - Ejecutar el contenedor de Docker (abrir cmd en la misma "altura" del archivo docker-compose)
+```
+docker-compose up --build
+```
 ```
 src/
 ├── application
 │   ├── usecases
 │   │   └── UserCreator
 │   │       └── index.ts              # Caso de uso para crear un usuario, maneja la lógica de negocio específica.
+│   └── services
+│       └── TokenService.ts           # Servicio que gestiona la lógica.
 ├── domain
 │   ├── entities
 │   │   └── User.ts                   # Entidad que representa a un usuario con sus propiedades y métodos.
@@ -68,8 +87,6 @@ src/
 │   │   └── UserNotFoundError.ts      # Excepción personalizada lanzada cuando no se encuentra un usuario.
 │   ├── repositories
 │   │   └── UserRepository.ts         # Interfaz que define las operaciones necesarias para interactuar con los usuarios.
-│   └── services
-│       └── UserService.ts            # Servicio que gestiona la lógica relacionada con los usuarios (ej. validaciones).
 ├── infrastructure
 │   ├── driven-adapters
 │   │   └── UserRepositoryAdapter.ts  # Adaptador para interactuar con la base de datos o almacenamiento de usuarios.
