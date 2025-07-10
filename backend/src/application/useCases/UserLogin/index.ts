@@ -27,12 +27,18 @@ export class UserLoginUseCase {
       throw new BadCredentialsException();
     }
 
-    const tokenStr = this._tokenService.generateToken({
+    const payload = {
       id: user.id!,
       email: user.email,
-      roles: user.roles
-    });
+      roles: user.roles,
+    };
 
-    return { token: tokenStr };
+    const accessToken = this._tokenService.generateAccessToken(payload);
+    const refreshToken = this._tokenService.generateRefreshToken(payload);
+
+    return {
+      accessToken,
+      refreshToken,
+    }
   }
 }

@@ -5,14 +5,22 @@ import { UnauthorizedAccess } from 'domain/exceptions/UnauthorizedAccessExceptio
 import { AccessDeniedException } from 'domain/exceptions/AccessDeniedException';
 import { TokenExpiredException } from 'domain/exceptions/TokenExpiredException';
 import { TokenBlacklistRepository } from 'domain/repositories/TokenBlacklistRepository';
+import { Role } from 'domain/entities/enum/Role';
 
 dotenv.config();
+
+interface JwtPayload {
+  id: number;
+  email: string;
+  roles: Role[];
+  type: 'access' | 'refresh';
+}
 
 export interface AuthenticatedRequest extends Request {
   user?: {
     id: number;
     email: string;
-    roles: string[];
+    roles: Role[];
   };
 }
 
@@ -26,20 +34,30 @@ export function authenticateJWT(blacklistRepo: TokenBlacklistRepository) {
 
     const token = authHeader.split(' ')[1];
 
-    // Verificar si el token está en la blacklist
     const isBlacklisted = await blacklistRepo.isTokenBlacklisted(token);
     if (isBlacklisted) {
       return next(new UnauthorizedAccess());
     }
 
     try {
-      const decoded = jwt.verify(token, process.env.JWT_SECRET as string) as AuthenticatedRequest['user'];
-      req.user = decoded;
+      const decoded = jwt.verify(token, process.env.JWT_SECRET as string) as JwtPayload;
+
+      if (decoded.type !== 'access') {
+        return next(new AccessDeniedException());
+      }
+
+      req.user = {
+        id: decoded.id,
+        email: decoded.email,
+        roles: decoded.roles,
+      };
+
       next();
     } catch (err: any) {
       if (err.name === 'TokenExpiredError') {
         return next(new TokenExpiredException());
       }
+
       return next(new UnauthorizedAccess());
     }
   };
