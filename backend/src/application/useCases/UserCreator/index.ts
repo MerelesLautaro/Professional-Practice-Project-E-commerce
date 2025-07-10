@@ -54,13 +54,19 @@ export class UserCreatorUseCase {
     }
 
     // Generated Token
-    const tokenStr = this._tokenService.generateToken({
+    const payload = {
       id: createdUser.id,
       email: createdUser.email,
-      roles: createdUser.roles
-    })
+      roles: createdUser.roles,
+    };
 
-    return { token: tokenStr };
+    const accessToken = this._tokenService.generateAccessToken(payload);
+    const refreshToken = this._tokenService.generateRefreshToken(payload);
+
+    return {
+      accessToken,
+      refreshToken,
+    };
 
   }
 }
