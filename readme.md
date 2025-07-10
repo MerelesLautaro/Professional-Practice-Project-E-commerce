@@ -72,6 +72,12 @@ npm run build
 ```
 docker-compose up --build
 ```
+
+5 - Con la imagen de MySQL corriendo en el contenedor ejecutar:
+```
+npx prisma migrate dev --name init
+```
+
 ```
 src/
 ├── application
