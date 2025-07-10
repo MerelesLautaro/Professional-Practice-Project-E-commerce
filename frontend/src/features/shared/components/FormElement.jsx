@@ -8,8 +8,7 @@ const FormElement = ({ element }) => {
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePassword = () => setShowPassword((prev) => !prev);
-  const inputType =
-    type === "password" ? (showPassword ? "text" : "password") : type;
+  const inputType = type === "password" ? (showPassword ? "text" : "password") : type;
 
   const renderInput = () => (
     <div className="input-field">
@@ -31,14 +30,16 @@ const FormElement = ({ element }) => {
   const renderSelect = () => (
     <div className="input-field">
       {label && <label htmlFor={name}>{label}</label>}
-      <select id={name} {...field} {...rest}>
-        <option value="">-- Seleccionar --</option>
-        {options.map((opt, idx) => (
-          <option key={idx} value={opt.value}>
-            {opt.label}
-          </option>
-        ))}
-      </select>
+      <div className="input-wrapper">
+        <select id={name} {...field} {...rest}>
+          <option value="">-- Seleccionar --</option>
+          {options.map((opt, idx) => (
+            <option key={idx} value={opt.value}>
+              {opt.label}
+            </option>
+          ))}
+        </select>
+      </div>
       {meta.touched && meta.error && <div className="error">{meta.error}</div>}
     </div>
   );
