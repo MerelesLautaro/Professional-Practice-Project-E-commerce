@@ -11,7 +11,7 @@ paths:
   /api/v1/auth/login:
     post:
       summary: Login user
-      description: Authenticate user and return JWT token
+      description: Authenticate user and return JWT tokens
       tags:
         - Authentication
       requestBody:
@@ -38,15 +38,16 @@ paths:
                   accessToken:
                     type: string
                     example: eyJhbGciOiJIUzI1NiIsInR5cCI6...
+                  refreshToken:
+                    type: string
+                    example: eyJhbGciOiJIUzI1NiIsInR5cCI6...
         '400':
           description: Missing or invalid credentials
-
-
 
   /api/v1/auth/register:
     post:
       summary: Register user
-      description: Register a new user and return JWT token
+      description: Register a new user and return JWT tokens
       tags:
         - Authentication
       requestBody:
@@ -76,9 +77,12 @@ paths:
                   accessToken:
                     type: string
                     example: eyJhbGciOiJIUzI1NiIsInR5cCI6...
+                  refreshToken:
+                    type: string
+                    example: eyJhbGciOiJIUzI1NiIsInR5cCI6...
         '400':
           description: Bad request - validation error
-  
+
   /api/v1/auth/logout:
     post:
       summary: Logout user
@@ -100,3 +104,45 @@ paths:
           description: Successfully logged out (No Content)
         '400':
           description: Missing or invalid token in Authorization header
+
+  /api/v1/auth/refresh-token:
+    post:
+      summary: Refresh JWT token
+      description: Generate a new access token using a valid refresh token
+      tags:
+        - Authentication
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: header
+          name: Authorization
+          description: Bearer refresh token
+          required: true
+          schema:
+            type: string
+            example: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+      responses:
+        '200':
+          description: Token refreshed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  accessToken:
+                    type: string
+                    example: eyJhbGciOiJIUzI1NiIsInR5cCI6...
+                  refreshToken:
+                    type: string
+                    example: eyJhbGciOiJIUzI1NiIsInR5cCI6...
+        '400':
+          description: Missing or invalid refresh token
+        '401':
+          description: Unauthorized - refresh token expired or invalid
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

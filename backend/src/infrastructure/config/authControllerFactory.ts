@@ -6,6 +6,7 @@ import { InMemoryTokenBlacklistRepository } from 'infrastructure/implementations
 import { UserLogoutUseCase } from 'application/useCases/UserLogout';
 import { UserLoginUseCase } from 'application/useCases/UserLogin';
 import { LoginController } from 'infrastructure/driving-adapters/api-rest/controllers/authentication/LoginController';
+import { RefreshTokenController } from 'infrastructure/driving-adapters/api-rest/controllers/authentication/RefreshTokenController';
 
 export const buildAuthControllers = () => {
   const userRepository = new UserPrismaRepository(prisma);
@@ -19,5 +20,6 @@ export const buildAuthControllers = () => {
     registerController: new RegisterController(userRepository),
     logoutController: new LogoutController(userLogoutUseCase),
     loginController: new LoginController(userLoginUseCase),
+    refreshTokenController: new RefreshTokenController(),
   };
 };
