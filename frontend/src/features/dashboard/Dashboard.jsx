@@ -1,6 +1,6 @@
 import * as Yup from 'yup';
-import FormTableManager from '../shared/components/FormTableMannager';
-import { Container } from '../shared/components';
+import FormTableManager from "../../shared/components/FormTableMannager";
+import { Container } from "../../shared/components";
 
 const Dashboard = () => {
   const formElements = [
