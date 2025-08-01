@@ -1,4 +1,4 @@
-import { Navbar, Container, DynamicForm } from "../shared/components";
+import { Navbar, Container, DynamicForm } from "../../shared/components";
 import "@fontsource/iceberg";
 import { initialValues, validationSchema } from "./validations";
 import { formElements } from "./config";
