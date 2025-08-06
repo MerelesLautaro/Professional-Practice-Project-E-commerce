@@ -1,0 +1,57 @@
+.menu-group {
+  margin-bottom: 12px;
+}
+
+.menu-group-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 16px;
+  background-color: #fff;
+  font-weight: bold;
+  user-select: none;
+  transition: background 0.2s ease;
+}
+
+.menu-group-header:hover {
+  background-color: #ececec;
+}
+
+.menu-group-icon {
+  margin-right: 8px;
+}
+
+.menu-group-arrow {
+  margin-left: auto;
+}
+
+.menu-group-items {
+  padding-left: 16px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.collapse-btn button {
+  color: #ffffff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  font-size: 1rem;
+  border-radius: 3px;
+  margin: 0;           
+  display: inline-block;
+}
+
+.sidebar-container {
+  padding: 2rem;
+}
+
+.sidebar-title {
+  margin-bottom: 1rem;
+}
