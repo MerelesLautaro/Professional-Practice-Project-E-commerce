@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useField } from "formik";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import InputField from "./InputField";
+import SelectField from "./SelectField";
 
 const FormElement = ({ element }) => {
   const { type, name, label, options = [], ...rest } = element;
@@ -15,7 +16,7 @@ const FormElement = ({ element }) => {
       return <InputField{... element}/>;
 
     case "select":
-      return renderSelect();
+      return <SelectField{... element}/>;
 
     case "button":
       return (
