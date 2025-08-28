@@ -3,9 +3,10 @@ import { useField } from "formik";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import InputField from "./InputField";
 import SelectField from "./SelectField";
+import FormButton from "./FormButton";
 
 const FormElement = ({ element }) => {
-  const { type, name, label, options = [], ...rest } = element;
+  const {type, ...rest} = element;
 
   switch (type) {
     case "text":
@@ -16,14 +17,10 @@ const FormElement = ({ element }) => {
       return <InputField{... element}/>;
 
     case "select":
-      return <SelectField{... element}/>;
+      return <SelectField{... rest}/>;
 
     case "button":
-      return (
-        <button type={element.submit ? "submit" : "button"} {...rest}>
-          {label}
-        </button>
-      );
+      return <FormButton{... rest}/>;
 
     default:
       return null;
