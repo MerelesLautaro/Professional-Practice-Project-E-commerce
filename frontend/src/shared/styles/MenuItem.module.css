@@ -1,4 +1,4 @@
-.menu-item {
+.menuItem {
   padding: 8px 16px;
   display: block;
   color: #333;
@@ -6,11 +6,11 @@
   transition: background 0.2s ease;
 }
 
-.menu-item:hover {
+.menuItem:hover {
   background-color: #f0f0f0;
 }
 
-.menu-item.active {
+.active {
   font-weight: bold;
   background-color: #e0e0e0;
   color: #000;

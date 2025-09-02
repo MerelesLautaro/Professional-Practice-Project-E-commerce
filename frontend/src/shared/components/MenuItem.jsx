@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router';
-import '../styles/MenuItem.css';
+import styles from '../styles/MenuItem.module.css';
 
 const MenuItem = ({ to, label }) => {
   return (
     <NavLink
       to={to}
       className={({ isActive }) =>
-        `menu-item ${isActive ? 'active' : ''}`
+        `${styles.menuItem} ${isActive ? styles.active : ''}`
       }
     >
       {label}
