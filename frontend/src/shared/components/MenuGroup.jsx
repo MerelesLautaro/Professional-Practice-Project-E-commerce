@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router';
 import MenuItem from './MenuItem';
-import '../styles/MenuGroup.css';
+import styles from '../styles/MenuGroup.module.css';
 
 const MenuGroup = ({ title, icon, routes }) => {
   const location = useLocation();
   const [expanded, setExpanded] = useState(false);
 
-  // Detecta si alguna ruta hija está activa
   useEffect(() => {
     const isActive = routes.some(route => location.pathname.startsWith(route.to));
     if (isActive) {
@@ -20,15 +19,15 @@ const MenuGroup = ({ title, icon, routes }) => {
   };
 
   return (
-    <div className="menu-group">
-      <div className="menu-group-header" onClick={toggleExpand}>
-        <span className="menu-group-icon">{icon}</span>
-        <span className="menu-group-title">{title}</span>
-        <span className="menu-group-arrow">{expanded ? '▾' : '▸'}</span>
+    <div className={styles.menuGroup}>
+      <div className={styles.menuGroupHeader} onClick={toggleExpand}>
+        <span className={styles.menuGroupIcon}>{icon}</span>
+        <span className={styles.menuGroupTitle}>{title}</span>
+        <span className={styles.menuGroupArrow}>{expanded ? '▾' : '▸'}</span>
       </div>
 
       {expanded && (
-        <div className="menu-group-items">
+        <div className={styles.menuGroupItems}>
           {routes.map((route, index) => (
             <MenuItem key={index} to={route.to} label={route.label} />
           ))}

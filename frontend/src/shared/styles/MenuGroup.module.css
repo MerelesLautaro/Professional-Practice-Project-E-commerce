@@ -1,8 +1,8 @@
-.menu-group {
+.menuGroup {
   margin-bottom: 12px;
 }
 
-.menu-group-header {
+.menuGroupHeader {
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -13,23 +13,23 @@
   transition: background 0.2s ease;
 }
 
-.menu-group-header:hover {
+.menuGroupHeader:hover {
   background-color: #ececec;
 }
 
-.menu-group-icon {
+.menuGroupIcon {
   margin-right: 8px;
 }
 
-.menu-group-arrow {
+.menuGroupArrow {
   margin-left: auto;
 }
 
-.menu-group-items {
+.menuGroupItems {
   padding-left: 16px;
 }
 
-.header-container {
+.headerContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,7 +37,7 @@
   margin-bottom: 1rem;
 }
 
-.collapse-btn button {
+.collapseBtn button {
   color: #ffffff;
   border: none;
   width: 40px;
@@ -48,10 +48,10 @@
   display: inline-block;
 }
 
-.sidebar-container {
+.sidebarContainer {
   padding: 2rem;
 }
 
-.sidebar-title {
+.sidebarTitle {
   margin-bottom: 1rem;
 }
