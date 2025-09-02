@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaBars } from 'react-icons/fa';
-import MenuGroup from './MenuGroup';
+import MenuGroup from './MenuGroup/MenuGroup';
 import Divider from './Divider'
 
 const Sidebar = () => {

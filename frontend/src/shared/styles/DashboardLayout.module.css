@@ -1,4 +1,4 @@
-.dashboard-layout {
+.dashboardLayout {
   display: flex;
   height: 100vh;
   overflow: hidden;
@@ -16,7 +16,7 @@
   width: 70px;
 }
 
-.dashboard-content {
+.dashboardContent {
   flex: 1;
   padding: 24px;
   background-color: #f5f5f5;
