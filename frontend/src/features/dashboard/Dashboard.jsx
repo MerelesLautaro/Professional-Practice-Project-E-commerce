@@ -1,5 +1,5 @@
 import * as Yup from 'yup';
-import FormTableManager from "../../shared/components/FormTableMannager";
+import FormTableManager from "../../shared/components/FormComponets/FormTableMannager";
 import { Container } from "../../shared/components";
 
 const Dashboard = () => {

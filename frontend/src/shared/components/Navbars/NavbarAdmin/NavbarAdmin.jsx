@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router';
-import styles from '../styles/NavbarAdmin.module.css';
+import styles from './NavbarAdmin.module.css';
 
 const NavbarAdmin = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);

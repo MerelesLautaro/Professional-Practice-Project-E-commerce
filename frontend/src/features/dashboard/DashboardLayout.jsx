@@ -1,8 +1,8 @@
 import React from 'react';
 import { Outlet } from 'react-router';
-import Sidebar from '../../Sidebar';
-import NavbarAdmin from '../../NavbarAdmin';
-import styles from '../../../styles/DashboardLayout.module.css';
+import Sidebar from '../../shared/components/Sidebar/Sidebar';
+import NavbarAdmin from '../../shared/components/Navbars/NavbarAdmin/NavbarAdmin';
+import styles from './DashboardLayout.module.css';
 
 const DashboardLayout = () => {
   return (
