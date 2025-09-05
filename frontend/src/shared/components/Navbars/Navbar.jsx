@@ -1,8 +1,12 @@
+import styles from './Navbar.module.css'
+
 const Navbar=({children})=>{
     return(
-        <div className="navbar">
-            <a href="#" className="site-title">Ecommerce</a>
+        <div className={styles.navbar}>
+            <div className={styles.navbarList}>                
+            <a href="#" className={styles.siteTitle}>Ecommerce</a>
             {children}
+            </div>
         </div>
     )
 }

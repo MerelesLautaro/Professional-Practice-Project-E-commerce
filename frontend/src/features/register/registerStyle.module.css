@@ -96,34 +96,6 @@ input {
     padding-left: 0.75rem; 
 }
 
-.navbar {
-    background-color: #616161;
-    color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 4rem;         
-}
-
-.navbar-list ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    gap: 4rem;            
-}
-
-.site-title {
-    font-size: 3rem;    
-    color: inherit;
-    text-decoration: none;
-}
-
-.navbar-list a {
-    color: inherit;
-    text-decoration: none;
-}
-
 .password-toggle {
     position: absolute;
     right: 0.75rem;
