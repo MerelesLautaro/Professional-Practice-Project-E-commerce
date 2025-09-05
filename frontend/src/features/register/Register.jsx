@@ -13,7 +13,7 @@ function Register() {
         <div className="forms-title">
           <h1>Registrarse | </h1>
           <h2>¿Ya tienes cuenta?</h2>
-          <a href="#">Ingresá aquí</a>
+          <a href="/login">Ingresá aquí</a>
         </div>
         <DynamicForm
           elements={formElements}
