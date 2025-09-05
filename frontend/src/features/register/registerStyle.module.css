@@ -9,20 +9,6 @@ label {
     font-size: 1.5rem; 
 }
 
-button {
-    background-color: #000000;
-    color: #FFFFFF;
-    border: none;
-    width: 12.5rem;   
-    height: 2.8125rem; 
-    font-size: 1.5rem; 
-}
-
-button:hover {
-    background-color: #333333;
-    cursor: pointer;
-}
-
 .card {
     display: flex;
     flex-direction: column;
