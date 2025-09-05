@@ -1,0 +1,35 @@
+.inputField {
+  width: 100%;
+  max-width: 35.125rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inputField label {
+  width: 100%;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.inputWrapper {
+  width: 100%;
+}
+
+.passwordToggle {
+    position: absolute;
+    right: 0.75rem;
+    top: 55%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #555;
+}
+
+.error {
+    color: #ff0000;
+    margin-top: 0.25rem;  
+    font-size: 0.9em;
+    width: 100%;
+    text-align: left;
+    padding-left: 0.75rem; 
+}
