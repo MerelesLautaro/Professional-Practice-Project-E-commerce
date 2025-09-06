@@ -1,12 +1,14 @@
 import React from "react";
 import { useField } from "formik";
+import styles from './styles/InputField.module.css'
+import styleSelect from './styles/Select.module.css'
 const SelectField = ({ label, name, options = [], ...rest }) => {
     const [field, meta]= useField(name)
   return (
-    <div className="input-field">
+    <div className={styles.input-field}>
       {label && <label htmlFor={name}>{label}</label>}
-      <div className="input-wrapper">
-        <select id={name} {...field} {...rest}>
+      <div className={styles.inputWrapper}>
+        <select className={styleSelect.selectInput} id={name} {...field} {...rest}>
           {options.map((opt, idx) => (
             <option key={idx} value={opt.value}>
               {opt.label}
@@ -14,7 +16,7 @@ const SelectField = ({ label, name, options = [], ...rest }) => {
           ))}
         </select>
       </div>
-      {meta.touched && meta.error && <div className="error">{meta.error}</div>}
+      {meta.touched && meta.error && <div className={styles.error}>{meta.error}</div>}
     </div>
   );
 }
