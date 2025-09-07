@@ -5,9 +5,7 @@
     padding: 1.25rem; 
 }
 
-label {
-    font-size: 1.5rem; 
-}
+
 
 .card {
     display: flex;
@@ -22,48 +20,28 @@ label {
     box-sizing: border-box;
 }
 
-.forms-title {
+.formsTitle {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.3125rem; 
 }
 
-.forms-title h2 {
+.formsTitle h2 {
     color: #616161;
 }
 
-.forms-title a {
+.formsTitle a {
     color: #616161;
     text-decoration: none;
 }
 
-.forms-title a:hover {
+.formsTitle a:hover {
     color: #000000;
     cursor: pointer;
 }
 
-form {
-    width: 100%;
-    max-width: 35.125rem; 
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 1.875rem; 
-    gap: 1.25rem;      
-}
-
-input {
-    height: 2rem;
-    width: 100%;
-    max-width: 35.125rem; 
-    font-size: 1.25rem;  
-    padding: 0.5rem;      
-}
 
 
 
-.input-wrapper {
-    position: relative;
-    width: 100%;
-}
+
