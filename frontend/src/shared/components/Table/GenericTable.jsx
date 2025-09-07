@@ -1,9 +1,10 @@
 import React from 'react';
+import styles from './Table.module.css'
 
 const GenericTable = ({ data, columns, actions = [], keyField = 'id' }) => {
   return (
-    <div className="table-wrapper">
-      <table className="table">
+    <div>
+      <table className={styles.table}>
         <thead>
           <tr>
             {columns.map((col) => (
@@ -21,12 +22,12 @@ const GenericTable = ({ data, columns, actions = [], keyField = 'id' }) => {
                 </td>
               ))}
               {actions.length > 0 && (
-                <td className="acciones">
+                <td className={styles.acciones}>
                   {actions.map((action, idx) => (
                     <button
                       key={idx}
                       onClick={() => action.onClick(item, data, () => {})}
-                      className={action.label.toLowerCase()}
+                      className={styles[action.label.toLowerCase()]}
                     >
                       {action.label}
                     </button>

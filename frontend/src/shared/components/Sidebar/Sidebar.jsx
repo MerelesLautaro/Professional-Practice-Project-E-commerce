@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaBars } from 'react-icons/fa';
-import MenuGroup from './MenuGroup';
-import Divider from './Divider'
+import MenuGroup from '../MenuGroup/MenuGroup';
+import Divider from '../ContainerAndDivider/Divider'
 
 const Sidebar = () => {
 

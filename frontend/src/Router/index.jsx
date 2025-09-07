@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import { RegisterScreen, DashboardScreen } from "../Pages";
 import MainLayout from "../shared/components/layouts/MainLayout";
-import DashboardLayout from "../shared/components/layouts/dashboard/DashboardLayout"
+import DashboardLayout from "../features/dashboard/DashboardLayout"
 
 export const Router = createBrowserRouter([
   {

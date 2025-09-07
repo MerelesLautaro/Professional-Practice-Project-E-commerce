@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router';
-import '../styles/NavbarAdmin.css';
+import styles from './NavbarAdmin.module.css';
 
 const NavbarAdmin = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -18,17 +18,17 @@ const NavbarAdmin = () => {
   const getInitial = (name) => name ? name.charAt(0).toUpperCase() : '?';
 
   return (
-    <nav className="navbar">
-      <div className="navbarLeft">
-        <NavLink to="/dashboard" className="navLink">Inicio</NavLink>
+    <nav className={styles.navbar}>
+      <div className={styles.navbarLeft}>
+        <NavLink to="/dashboard" className={styles.navLink}>Inicio</NavLink>
       </div>
 
-      <div className="navbarRight">
-        <div className="userInfo" onClick={toggleDropdown}>
-          <span className="username">{user.name}</span>
-          <div className="avatar">{getInitial(user.name)}</div>
+      <div className={styles.navbarRight}>
+        <div className={styles.userInfo} onClick={toggleDropdown}>
+          <span className={styles.username}>{user.name}</span>
+          <div className={styles.avatar}>{getInitial(user.name)}</div>
           {dropdownOpen && (
-            <div className="dropdown">
+            <div className={styles.dropdown}>
               <button onClick={handleLogout}>Cerrar sesión</button>
             </div>
           )}

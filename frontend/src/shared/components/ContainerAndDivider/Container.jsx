@@ -1,7 +1,8 @@
+import styles from './Container.module.css'
 const Container = ({ children }) => {
   return (
-    <div className="card-container">
-      <div className="card">
+    <div className={styles.cardContainer}>
+      <div className={styles.card}>
         {children}
       </div>
     </div>
