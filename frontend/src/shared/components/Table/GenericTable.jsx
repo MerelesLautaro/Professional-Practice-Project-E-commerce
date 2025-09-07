@@ -3,7 +3,7 @@ import styles from './Table.module.css'
 
 const GenericTable = ({ data, columns, actions = [], keyField = 'id' }) => {
   return (
-    <div /*className="table-wrapper"*/>
+    <div>
       <table className={styles.table}>
         <thead>
           <tr>
@@ -27,7 +27,7 @@ const GenericTable = ({ data, columns, actions = [], keyField = 'id' }) => {
                     <button
                       key={idx}
                       onClick={() => action.onClick(item, data, () => {})}
-                      className={action.label.toLowerCase()}
+                      className={styles[action.label.toLowerCase()]}
                     >
                       {action.label}
                     </button>
