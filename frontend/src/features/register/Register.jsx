@@ -1,8 +1,8 @@
-import {Container, DynamicForm } from "../../shared/components";
+import { Container, DynamicForm } from "../../shared/components";
 import "@fontsource/iceberg";
 import { initialValues, validationSchema } from "./validations";
 import { formElements } from "./config";
-import styles from './registerStyle.module.css'
+import styles from "./registerStyle.module.css";
 
 function Register() {
   const handleSubmit = (values) => {
@@ -10,15 +10,19 @@ function Register() {
   };
 
   return (
-      <Container>
-
-        <DynamicForm
-          elements={formElements}
-          initialValues={initialValues}
-          validationSchema={validationSchema}
-          onSubmit={handleSubmit}
-        />
-      </Container>
+    <Container>
+      <div className={styles.formsTitle}>
+        <h1>Registrarse | </h1>
+        <h2>¿Ya tienes cuenta?</h2>
+        <a href="#">Ingresá aquí</a>
+      </div>
+      <DynamicForm
+        elements={formElements}
+        initialValues={initialValues}
+        validationSchema={validationSchema}
+        onSubmit={handleSubmit}
+      />
+    </Container>
   );
 }
 
